@@ -19,11 +19,11 @@ public class UserDaoJDBCImpl implements UserDao {
         try(Connection connected = Util.getConnection();){
             java.sql.PreparedStatement stmt = null;
             String sql = "CREATE TABLE IF NOT EXISTS USER_TABLE" +
-            " (id INT UNSIGNED NOT NULL AUTO_INCREMENT," +
-            " name VARCHAR(40)," +
-            " lastName VARCHAR(40)," +
-            " age TINYINT UNSIGNED," +
-            " PRIMARY KEY (id))";
+                         " (id INT UNSIGNED NOT NULL AUTO_INCREMENT," +
+                         " name VARCHAR(40)," +
+                         " lastName VARCHAR(40)," +
+                         " age TINYINT UNSIGNED," +
+                         " PRIMARY KEY (id))";
             stmt = connected.prepareStatement(sql);
             stmt.executeUpdate();
             //System.out.println("Table created if it not exists");
