@@ -71,7 +71,10 @@ public class User {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(id, user.id) && Objects.equals(name, user.name) && Objects.equals(lastName, user.lastName) && Objects.equals(age, user.age);
+        return Objects.equals(id, user.id) 
+                && Objects.equals(name, user.name) 
+                && Objects.equals(lastName, user.lastName) 
+                && Objects.equals(age, user.age);
     }
 
     @Override
