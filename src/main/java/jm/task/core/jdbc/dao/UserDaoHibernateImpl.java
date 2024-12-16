@@ -13,20 +13,21 @@ import javax.persistence.Persistence;
 
 public class UserDaoHibernateImpl implements UserDao {
     private String querySql;
+
     public UserDaoHibernateImpl() {
 
     }
-
 
     @Override
     public void createUsersTable() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("UserTable");
         emf.close();
-        //Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        //Transaction tx1 = session.beginTransaction();
-        //session.;
-        //tx1.commit();
-        //session.close();
+        // Session session =
+        // HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        // Transaction tx1 = session.beginTransaction();
+        // session.;
+        // tx1.commit();
+        // session.close();
     }
 
     @Override
